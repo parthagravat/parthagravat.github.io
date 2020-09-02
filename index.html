@@ -17,35 +17,45 @@
         border-width:0px;
         border:none;
         }
-        input:focus {outline:none!important;}
+        input:focus{outline:none!important;}
         </style>
         </head>
-    <body>
+    <body style="font-size: largo" id="mytab">
         <table style="overflow-x:auto">
             <tr>
-                <td>SL NO. :<input type="text"></td>
+                <td>SL NO. :<input type="text" id="slno"></td>
             </tr>
             <tr>
-                <td>COMPANY NAME :</td>
+                <td>COMPANY NAME :<input type="text" id="cname"></td>
             </tr>
             <tr>
-                <td>CONTACT PERSON :</td>
+                <td>CONTACT PERSON :<input type="text" id="cperson"></td>
             </tr>
             <tr>
-                <td>CITY :</td>
+                <td>CITY :<input type="text" id="city"></td>
             </tr>
             <tr>
-                <td>STREET :</td>
+                <td>STREET :<input type="text" id="street"></td>
             </tr>
             <tr>
-                <td>DEPATATCH DATE :</td>
+                <td>DEPATATCH DATE :<input type="date" id="ddate"></td>
+            </tr>
+            <tr>
+                <td>MODEL :<input type="text" id="model"></td>
             </tr>
         </table>
-        <table>
-            
-        </table>
-        <table>
-            
-        </table>
+            <input type="submit" onclick="printthis()" id="btn">
     </body>
+    <script>
+        function printthis() {
+            alert("htt");
+            var restorepage = document.body.innerHTML;
+            document.getElementById('btn').style.display = "none";
+            var printcontent = document.getElementById('mytab').innerHTML;
+       // document.body.innerHTML = printcontent;
+        window.print();
+        document.getElementById('btn').style.display = "block";
+       // document.body.innerHTML = restorepage;
+        }
+        </script>
 </html>
